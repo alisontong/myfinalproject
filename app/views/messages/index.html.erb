@@ -36,7 +36,7 @@
      <p>Body:<%= message.body %></p>
      <p><%= link_to 'Reply', user_path(User.find_by(email:message.from)), class: "btn btn-primary" %>
 
-      <%= link_to 'Delete', user_message_path(current_user, message),class: "btn btn-primary",
+      <%= link_to 'Delete', user_message_path(current_user, message),class: "btn btn-default",
               method: :delete,
               data: { confirm: 'Are you sure?' } %>
      </p>
@@ -58,7 +58,7 @@
    <p>Title:<%= message.title %><br></p>
    <p>Body:<%= message.body %></p>
    <p><%= link_to 'Reply', user_path(User.find_by(email:message.from)), class: "btn btn-primary" %>
-    <%= link_to 'Delete', user_message_path(current_user, message),class: "btn btn-primary",
+    <%= link_to 'Delete', user_message_path(current_user, message),class: "btn btn-default",
               method: :delete,
               data: { confirm: 'Are you sure?' } %>
 
@@ -80,7 +80,7 @@
    <p>Title:<%= message.title %><br></p>
    <p>Body:<%= message.body %></p>
    <p><%= link_to 'Reply', user_path(User.find_by(email:message.from)), class: "btn btn-primary"%>
-   <%= link_to 'Delete', user_message_path(current_user, message),class: "btn btn-primary",
+   <%= link_to 'Delete', user_message_path(current_user, message),class: "btn btn-default",
               method: :delete,
               data: { confirm: 'Are you sure?' } %></p>
    <% end %>

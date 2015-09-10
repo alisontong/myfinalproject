@@ -43855,3 +43855,35 @@ Processing by HomeController#show as HTML
   [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 8]]
   [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 8]]
 Completed 200 OK in 87ms (Views: 83.5ms | ActiveRecord: 1.7ms)
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mCity Exists (0.7ms)[0m  SELECT  1 AS one FROM "cities" WHERE ("cities"."id" IS NOT NULL) AND "cities"."slug" = $1 LIMIT 1  [["slug", "san-francisco"]]
+  [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO "cities" ("name", "slug", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "San Francisco"], ["slug", "san-francisco-8f9360f6-df2b-46d7-8f61-2bcb4f1c79eb"], ["created_at", "2015-09-10 03:57:48.458690"], ["updated_at", "2015-09-10 03:57:48.458690"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mCity Exists (0.6ms)[0m  SELECT  1 AS one FROM "cities" WHERE ("cities"."id" IS NOT NULL) AND "cities"."slug" = $1 LIMIT 1  [["slug", "san-jose"]]
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "cities" ("name", "slug", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "San Jose"], ["slug", "san-jose"], ["created_at", "2015-09-10 03:58:06.749390"], ["updated_at", "2015-09-10 03:58:06.749390"]]
+  [1m[35m (3.9ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mCity Exists (0.5ms)[0m  SELECT  1 AS one FROM "cities" WHERE ("cities"."id" IS NOT NULL) AND "cities"."slug" = $1 LIMIT 1  [["slug", "seattle"]]
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "cities" ("name", "slug", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Seattle"], ["slug", "seattle"], ["created_at", "2015-09-10 03:58:22.853333"], ["updated_at", "2015-09-10 03:58:22.853333"]]
+  [1m[35m (2.3ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mCity Exists (0.5ms)[0m  SELECT  1 AS one FROM "cities" WHERE ("cities"."id" IS NOT NULL) AND "cities"."slug" = $1 LIMIT 1  [["slug", "new-york"]]
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "cities" ("name", "slug", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "New York"], ["slug", "new-york"], ["created_at", "2015-09-10 03:58:48.767071"], ["updated_at", "2015-09-10 03:58:48.767071"]]
+  [1m[35m (2.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mCity Exists (0.4ms)[0m  SELECT  1 AS one FROM "cities" WHERE ("cities"."id" IS NOT NULL) AND "cities"."slug" = $1 LIMIT 1  [["slug", "los-angeles"]]
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "cities" ("name", "slug", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Los Angeles"], ["slug", "los-angeles"], ["created_at", "2015-09-10 03:59:05.677343"], ["updated_at", "2015-09-10 03:59:05.677343"]]
+  [1m[35m (1.8ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mCity Exists (0.4ms)[0m  SELECT  1 AS one FROM "cities" WHERE ("cities"."id" IS NOT NULL) AND "cities"."slug" = $1 LIMIT 1  [["slug", "shenzhen"]]
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "cities" ("name", "slug", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Shenzhen"], ["slug", "shenzhen"], ["created_at", "2015-09-10 03:59:24.159043"], ["updated_at", "2015-09-10 03:59:24.159043"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mCity Exists (0.3ms)[0m  SELECT  1 AS one FROM "cities" WHERE ("cities"."id" IS NOT NULL) AND "cities"."slug" = $1 LIMIT 1  [["slug", "beijing"]]
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "cities" ("name", "slug", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Beijing"], ["slug", "beijing"], ["created_at", "2015-09-10 03:59:40.311903"], ["updated_at", "2015-09-10 03:59:40.311903"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mCity Exists (0.3ms)[0m  SELECT  1 AS one FROM "cities" WHERE ("cities"."id" IS NOT NULL) AND "cities"."slug" = $1 LIMIT 1  [["slug", "shanghai"]]
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "cities" ("name", "slug", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Shanghai"], ["slug", "shanghai"], ["created_at", "2015-09-10 03:59:52.415781"], ["updated_at", "2015-09-10 03:59:52.415781"]]
+  [1m[35m (0.5ms)[0m  COMMIT
