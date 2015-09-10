@@ -33,7 +33,7 @@
      <p>From:<%= message.from %></p>
      <p>To:<%= message.to %></p>
      <p>Title:<%= message.title %><br></p>
-     <p>Body:<%= message.body %></p>
+     <p>Message:<%= message.body %></p>
      <p><%= link_to 'Reply', user_path(User.find_by(email:message.from)), class: "btn btn-default" %>
 
       <%= link_to 'Delete', user_message_path(current_user, message),class: "btn btn-default",
@@ -56,7 +56,7 @@
    <p>From:<%= message.from %></p>
    <p>To:<%= message.to %></p>
    <p>Title:<%= message.title %><br></p>
-   <p>Body:<%= message.body %></p>
+   <p>Message:<%= message.body %></p>
    <p><%= link_to 'Reply', user_path(User.find_by(email:message.from)), class: "btn btn-default" %>
     <%= link_to 'Delete', user_message_path(current_user, message),class: "btn btn-default",
               method: :delete,
@@ -78,7 +78,7 @@
    <p>From:<%= message.from %></p>
    <p>To:<%= message.to %></p>
    <p>Title:<%= message.title %><br></p>
-   <p>Body:<%= message.body %></p>
+   <p>Message:<%= message.body %></p>
    <p><%= link_to 'Reply', user_path(User.find_by(email:message.from)), class: "btn btn-default"%>
    <%= link_to 'Delete', user_message_path(current_user, message),class: "btn btn-default",
               method: :delete,
