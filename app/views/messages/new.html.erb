@@ -1,0 +1,17 @@
+<div class='userupdate'>
+<div class="class">
+	<br>
+	<div class="row">
+		<div class="col-md-4 col-md-offset-4">
+<%= form_for :message, url: messages_path do |f| %>
+	<%= f.text_field :to, class:"form-control", :placeholder => "To" %><br>
+	<%= f.text_field :title, class:"form-control", :placeholder => "title" %><br>
+	<%= f.text_field :body, class:"form-control", :placeholder => "body" %><br>
+
+	<%= f.submit "Submit", class: "btn btn-primary" %>
+
+	<% end %>
+</div>
+</div>
+</div>
+</div>

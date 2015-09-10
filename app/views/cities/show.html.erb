@@ -1,0 +1,81 @@
+
+<div class="citypage">
+ <h4>Members from <%= @city.name %></h4>
+ <br>
+
+  <div class="container">
+    <div class="cityuserss">
+      <div class="row">
+    <div class="col-xs-3 first">
+    <div class="thumbnail">
+       <% count = 1 %>         
+      <% @city.users.each do |user| %> 
+      <% if count % 4 == 1 %>
+      <h3><%= user.username %></h3>
+        <p><%= user.age %></p>
+        <p><%= user.gender %></p> 
+        <div><img src="<%= user.image_url %>" id="image"></div>
+        <p><%= link_to 'Show Profile', user_path(user), class: "btn btn-default" %></p>
+          
+         <% end %>
+    <% count += 1 %>
+  <% end %> 
+  </div>
+   </div>
+
+    <div class="col-xs-3 first">
+    <div class="thumbnail">
+       <% count = 1 %>
+      <% @city.users.each do |user| %> 
+      <% if count % 4 == 2 %>
+      <h3><%= user.username %></h3>
+        <p><%= user.age %></p>
+        <p><%= user.gender %></p> 
+        <div><img src="<%= user.image_url %>" id="image"></div>
+        <p><%= link_to 'Show Profile', user_path(user), class: "btn btn-default"%></p>
+          
+         <% end %>
+    <% count += 1 %>
+  <% end %> 
+  </div>
+   </div>
+
+    <div class="col-xs-3 first">
+    <div class="thumbnail">
+       <% count = 1 %>
+      <% @city.users.each do |user| %> 
+      <% if count % 4 == 3 %>
+      <h3><%= user.username %></h3>
+        <p><%= user.age %></p>
+        <p><%= user.gender %></p> 
+        <div><img src="<%= user.image_url %>" id="image"></div>
+        <p><%= link_to 'Show Profile', user_path(user), class: "btn btn-default" %></p>
+          
+         <% end %>
+    <% count += 1 %>
+  <% end %> 
+  </div>
+   </div>
+
+    <div class="col-xs-3 first">
+    <div class="thumbnail">
+       <% count = 1 %>
+      <% @city.users.each do |user| %> 
+      <% if count % 4 == 0 %>
+      <h3><%= user.username %></h3>
+        <p><%= user.age %></p>
+        <p><%= user.gender %></p> 
+        <div><img src="<%= user.image_url %>" id="image"></div>
+        <p><%= link_to 'Show Profile', user_path(user), class: "btn btn-default" %></p>
+          
+         <% end %>
+    <% count += 1 %>
+  <% end %> 
+  </div>
+   </div>
+  
+  </div>
+
+</div>
+
+

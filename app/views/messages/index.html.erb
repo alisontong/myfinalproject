@@ -1,0 +1,95 @@
+<div class="allmessages">
+<div class="container">
+  <div class="row">
+    <br>
+    <div class="col-xs-3 first" id="message-box">
+    <div class="thumbnail">
+     <% count = 1 %>
+     <% current_user.messages.each do |message| %> 
+     <% if count % 4 == 1 %> 
+     <p>From:<%= message.from %></p>
+     <p>To:<%= message.to %></p>
+     <p>Title:<%= message.title %><br></p>
+     <p>Message:<%= message.body %></p>
+     <p><%= link_to 'Reply', user_path(User.find_by(email:message.from)), class: "btn btn-default" %>
+
+     <%= link_to 'Delete', user_message_path(current_user, message),class: "btn btn-default",
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></p>
+   
+     <% end %>
+
+     <% count += 1 %>
+     <% end %> 
+   </div>
+ </div>
+   
+
+   <div class="col-xs-3 two" id="message-box">
+    <div class="thumbnail">
+     <% count = 1 %>
+     <% current_user.messages.each do |message| %> 
+     <% if count % 4 == 2 %> 
+     <p>From:<%= message.from %></p>
+     <p>To:<%= message.to %></p>
+     <p>Title:<%= message.title %><br></p>
+     <p>Body:<%= message.body %></p>
+     <p><%= link_to 'Reply', user_path(User.find_by(email:message.from)), class: "btn btn-primary" %>
+
+      <%= link_to 'Delete', user_message_path(current_user, message),class: "btn btn-primary",
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %>
+     </p>
+     <% end %>
+
+     <% count += 1 %>
+     <% end %> 
+   </div>
+ </div>
+
+ <div class="col-xs-3 three">
+  <div class="thumbnail" id="message-box">
+   <% count = 1 %>
+   <% current_user.messages.each do |message| %> 
+
+   <% if count % 4 == 3 %> 
+   <p>From:<%= message.from %></p>
+   <p>To:<%= message.to %></p>
+   <p>Title:<%= message.title %><br></p>
+   <p>Body:<%= message.body %></p>
+   <p><%= link_to 'Reply', user_path(User.find_by(email:message.from)), class: "btn btn-primary" %>
+    <%= link_to 'Delete', user_message_path(current_user, message),class: "btn btn-primary",
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %>
+
+   </p>
+   <% end %>
+
+   <% count += 1 %>
+   <% end %> 
+ </div>
+</div>
+
+<div class="col-xs-3 four">
+  <div class="thumbnail" id="message-box">
+   <% count = 1 %>
+   <% current_user.messages.each do |message| %> 
+   <% if count % 4 == 0 %> 
+   <p>From:<%= message.from %></p>
+   <p>To:<%= message.to %></p>
+   <p>Title:<%= message.title %><br></p>
+   <p>Body:<%= message.body %></p>
+   <p><%= link_to 'Reply', user_path(User.find_by(email:message.from)), class: "btn btn-primary"%>
+   <%= link_to 'Delete', user_message_path(current_user, message),class: "btn btn-primary",
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></p>
+   <% end %>
+
+   <% count += 1 %>
+   <% end %> 
+ </div>
+</div>
+
+</div>
+</div>
+</div>

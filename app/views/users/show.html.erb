@@ -1,0 +1,50 @@
+<div class="container">
+	<div class="row">
+		<br>
+		<!-- Profile -->
+		<div class="col-md-6 col-md-offset-3 profile-box">	
+			<legend>Profile</legend>
+
+			<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Send Message now</button>
+
+			<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+				<div class="modal-dialog modal-lg">
+					<div class="modal-content">
+						
+
+						<%= form_for :message, url: user_messages_path(@user) do |f| %>
+					
+						<%= f.hidden_field :to, :value => @user.email %>
+						<%= f.text_field :title, class:"form-control", :placeholder => "Title" %>
+						<br>
+						<%= f.text_area :body, class:"form-control", :placeholder => "Type Message Here" %>
+						<br>
+						
+						<%= f.submit %>
+						<% end %>
+					</div>
+				</div>
+			</div>
+
+			<h2>Name:<%= @user.name %></h2>
+			<p>Username:<%= @user.username %><br></p>
+			<p>Email:<%= @user.email %></p>
+			
+			<p>Profession:<%= @user.profession %></p>
+			<p>Age:<%= @user.age %></p> 
+			<p>Gender:<%= @user.gender %></p> 
+			<p>Height:<%= @user.height %></p>
+			<p>Education:<%= @user.education %></p>
+			<p>Country:<%= @user.country %></p>
+			<p>City:<%= @user.city.name %></p>
+			<p>Number of children:<%= @user.number_of_children %></p>
+			<p>Bio:<%= @user.bio %></p>
+			<div><img src="<%= @user.image_url %>" id="image2"></div>
+			<br>
+
+			
+			
+		</div>
+	</div>
+</div>
+</div>
